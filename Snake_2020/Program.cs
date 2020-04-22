@@ -15,14 +15,8 @@ namespace Snake_2020
             Console.Title = "Snake";
             Console.SetWindowSize(101, 26);
 
-            HorizontalLIne upline = new HorizontalLIne(0, 100, 0, '+');
-            HorizontalLIne downline = new HorizontalLIne(0, 100, 25, '+');
-            VerticalLine leftline = new VerticalLine(1, 25, 0, '+');
-            VerticalLine rightline = new VerticalLine(1, 25, 100, '+');
-            upline.Draw();
-            downline.Draw();
-            leftline.Draw();
-            rightline.Draw();
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
             Params settings = new Params();
             Sound sound = new Sound(settings.GetResourceFolder());

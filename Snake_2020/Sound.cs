@@ -26,18 +26,17 @@ namespace Snake_2020
             player.settings.setMode("loop", true); // loop mode
 
         }
+        public void PlayEat()
+        {
+            player.URL = pathToMedia + "Eat.mp3";
+            player.settings.volume = 100;
+            player.controls.play();
+        }
 
         public void Play(string songName)
         {
             player.URL = pathToMedia + songName + ".mp3";
             // player.settings.volume = 100;
-            player.controls.play();
-        }
-
-        public void PlayEat()
-        {
-            player.URL = pathToMedia + "Eat.mp3";
-            player.settings.volume = 100;
             player.controls.play();
         }
     }
