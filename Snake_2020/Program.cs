@@ -21,6 +21,7 @@ namespace Snake_2020
             Params settings = new Params();
             Sound sound = new Sound(settings.GetResourceFolder());
             sound.Play();
+            Sound soundeat = new Sound(settings.GetResourceFolder());
 
             Point p = new Point(4, 5, '*');
 
@@ -35,6 +36,7 @@ namespace Snake_2020
             {
                 if (snake.Eat(food))
                 {
+                    soundeat.PlayEat();
                     food = foodCreator.CreateFood();
                     food.Draw();
                 }
