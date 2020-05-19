@@ -11,7 +11,17 @@ namespace Snake_2020
         public int x;
         public int y;
         public char sym;
+        public string color;
         public bool isPoison;
+
+        public Point(int x_, int y_, char sym_, string color_)
+        {
+            x = x_;
+            y = y_;
+            sym = sym_;
+            color = color_;
+            //this.isPoison = isPoison;
+        }
         public Point()
         {
 

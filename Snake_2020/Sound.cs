@@ -21,6 +21,7 @@ namespace Snake_2020
         public void Play()
         {
             player.URL = pathToMedia + "Allways.mp3";
+            
             player.settings.volume = 30;
             player.controls.play();
             player.settings.setMode("loop", true); // loop mode
@@ -31,8 +32,14 @@ namespace Snake_2020
             player.URL = pathToMedia + "Eat.mp3";
             player.settings.volume = 100;
             player.controls.play();
+            
         }
+        public void Stop()
+        {
+            player.URL = pathToMedia + "Allways.mp3";
+            player.controls.stop();
 
+        }
         public void Play(string songName)
         {
             player.URL = pathToMedia + songName + ".mp3";

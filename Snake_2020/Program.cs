@@ -14,6 +14,10 @@ namespace Snake_2020
         {
             Console.Title = "Snake";
             Console.SetWindowSize(101, 26);
+            Random rand = new Random();
+            Console.SetCursorPosition(2, 2);
+            Console.WriteLine(Convert.ToString(rand.Next(Enum.GetNames(typeof(ConsoleColor)).Length)));
+            //ConsoleColor.(ConsoleColor(rand.Next(Enum.GetNames(typeof(ConsoleColor)).Length));
 
             Walls walls = new Walls(80, 25);
             walls.Draw();
